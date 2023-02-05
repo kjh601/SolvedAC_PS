@@ -37,3 +37,4 @@ for _ in range(N):
             print(arr[-1])
         else :
             print(-1)
+            
