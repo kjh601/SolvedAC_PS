@@ -13,8 +13,7 @@ def binary_search(head, rear, goal):
     result = 0
     
     while head < mid:
-        count = count_LAN_lines(mid)
-        if goal > count:
+        if goal > count_LAN_lines(mid):
             rear = mid
         else:
             result = max(result,mid)
