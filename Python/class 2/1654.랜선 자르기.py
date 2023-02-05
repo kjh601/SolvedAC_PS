@@ -16,13 +16,11 @@ def binary_search(head, rear, goal):
         if goal > count_LAN_lines(mid):
             rear = mid
         else:
-            result = max(result,mid)
             head = mid
         mid = (head+rear)//2
-    return result
+    return mid
 
 
 K, N = map(int,input().split())
 lines = [int(input()) for _ in range(K)]
-lines.sort()
-print(binary_search(0,lines[-1]+1,N))
+print(binary_search(0,2**31,N))
