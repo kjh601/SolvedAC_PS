@@ -12,4 +12,4 @@ for _ in range(N):
         else :
             print(0)
     else :
-        heapq.heappush(min_heap,x)y
+        heapq.heappush(min_heap,x)
