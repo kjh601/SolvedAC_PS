@@ -1,14 +1,14 @@
 def bfs(n, k):
     curr = [n]
     nxt = []
-    visited = set()
+    visited = [False]*100001
     depth = 0
     count = 0
     min_depth = 0
 
     while curr:
         num = curr.pop()
-        visited.add(num)
+        visited[num] = True
 
         if num == k:
             if min_depth == 0:
@@ -18,7 +18,7 @@ def bfs(n, k):
                 count += 1
 
         for x in [num-1, num+1, num*2]:
-            if -1 < x < 100001 and x not in visited:
+            if -1 < x < 100001 and not visited[x]:
                 nxt.append(x)
 
         if not curr:
