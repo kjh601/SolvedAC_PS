@@ -10,18 +10,16 @@ def bfs(n, k):
         num = curr.pop()
         visited.add(num)
 
-        if min_depth and min_depth == depth and num == k:
-            count += 1
-        if not min_depth and num == k:
-            min_depth = depth
-            count += 1
+        if num == k:
+            if min_depth == 0:
+                min_depth = depth
+                count += 1
+            elif min_depth == depth:
+                count += 1
 
-        if num > 0 and (num - 1) not in visited:
-            nxt.append(num - 1)
-        if num < 100000 and (num + 1) not in visited:
-            nxt.append(num + 1)
-        if num < 50001 and (num * 2) not in visited:
-            nxt.append(num * 2)
+        for x in [num-1, num+1, num*2]:
+            if -1 < x < 100001 and x not in visited:
+                nxt.append(x)
 
         if not curr:
             depth += 1
