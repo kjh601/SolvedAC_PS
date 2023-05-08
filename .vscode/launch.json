@@ -6,9 +6,9 @@
   "configurations": [
     {
       "type": "java",
-      "name": "test",
+      "name": "Java Debug",
       "request": "launch",
-      "mainClass": "test",
+      "mainClass": "${file}",
       "projectName": "SolvedAC_PS_89f6a028"
     },
     {
