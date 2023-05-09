@@ -12,5 +12,6 @@ public class Problem25314 {
             System.out.print("long ");    
         }
         System.out.println("int");
+        sc.close();
     }    
 }
