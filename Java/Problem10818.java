@@ -24,6 +24,6 @@ public class Problem10818 {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         bw.write(min + " " + max);
         bw.flush();
-        br.close();
+        br.close(); 
     }
 }
