@@ -10,4 +10,4 @@ while len(cards) > 1:
     discarded_cards.append(cards.popleft())
     cards.append(cards.popleft())
 
-print(' '.join(map(str, discarded_cards)), cards[0])
+print(' '.join(map(str, discarded_cards + list(cards))))
