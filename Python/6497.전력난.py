@@ -30,6 +30,8 @@ while (True):
 
     total = sum(t[-1] for t in edge)
     for v1, v2, w in edge:
+        v1 -= 1
+        v2 -= 1
         if findParent(parent, v1) == findParent(parent, v2):
             continue
         unionParent(parent, v1, v2)
