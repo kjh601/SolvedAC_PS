@@ -1,0 +1,5 @@
+A = int(input())
+B = int(input())
+print(A+B, end='\n')
+print(A-B, end='\n')
+print(A*B, end='\n')
